@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="solid" cellpadding="10" cellspacing="10" >
+    <form>
+        <th width="500px">Label</th>
+        <th width="500px">Enter Your data according to label</th>
+        <tr>
+            <td align="center" > NAME:</td>
+            <td align="center"><INPUT type="text" name="name" placeholder="name" minlength='5' required></INPUT></td>
+        </tr>
+        <tr>
+            <td align="center" > PASSWORD:</td>
+            <td align="center"><INPUT type="password" name="password" placeholder="password" minlength="8" maxlength="12"></INPUT></td>
+        </tr>
+        <tr>
+            <td align="center" > ADDRESS:</td>
+            <td align="center"><textarea rows="10" cols="41" name="address" placeholder="address" readonly></textarea></td>
+        </tr>
+        <tr>
+            <td align="center" > PHONE NUMBER:</td>
+            <td align="center"><INPUT type="phn" name="phoneno" placeholder="phoneno" minlength="10" maxlength="10"></INPUT></td>
+        </tr>
+       
+        <tr>
+            <td align="center" > EMAIL:</td>
+            <td align="center"><INPUT type="email" name="email" placeholder="email"></INPUT></td>
+        </tr>
+        <tr>
+            <td align="center" > DOB:</td>
+            <td align="center"><INPUT type="date" name="dob" placeholder="enter date of birth"></INPUT></td>
+        </tr>
+        <tr>
+            <td align="center" > GENDER(readonly):</td>
+            <td align="center">MALE: <INPUT type="radio" name="gender" value="male" readonly> </INPUT> FEMALE: <INPUT type="radio" name="gender" value="female"></INPUT></td>
+        </tr>
+        <tr><td align="center"><input type="submit" name='submit'></td><td align="center"><input type="reset" name="reset"></td>
+        </tr></form></table>
+</body>
+</html>
