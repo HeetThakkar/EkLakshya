@@ -1,0 +1,61 @@
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+     'menu main main main right right'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+  /* background-color: indigo; */
+  padding: 10px;
+}
+
+.container > div {
+
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+#menu{
+    list-style-type:none;
+    text-align: left;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+</style>
+</head>
+<body>
+
+
+
+<div class="container">
+  <div class="item1">
+    <header>
+      <h1>Heet Thakkar</h1>
+    </header>
+  </div>
+  <div class="item2" style="text-align:center;">
+    <H1>ACADEMICS </H1>
+    <table border="solid" cellpadding="10" cellspacing="10" style="margin-left: 100px;" >
+        <tr><td align="center" width=40px>SSC: </td><td align="center" width=40px>80 </td></tr>
+        <tr><td align="center">DIPLOMA: </td ><td align="center">82 </td></tr>
+        <tr><td align="center">BE: </td><td align="center">85 </td></tr>
+    </table>   
+  </div>
+  <div class="item3"> <img src="DSC02614.jpg" width="400"></div>  
+  <div class="item4">
+    <H1>TECHNICAL SKILLS </H1>
+    <Ol><li>C</li><li>C++</li><li>JAVA</li><li>PYTHON</li></Ol>
+  </div>
+  <div class="item5">  <a href=""style="color: blue;text-decoration: underline;">heetthakkar4@gmail.com</a> <br>
+    <a href="" style="color: blue;text-decoration: underline;">9167075976</a>
+  </div>
+</div>
