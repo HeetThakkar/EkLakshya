@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateUser(){
+            usernames=['ram','tom','jack','heet'];
+            var name=document.getElementById("username").value
+        for(key in usernames){
+        if (name==usernames[key]){
+            document.getElementById("mydiv").innerHTML = 'welcome '+ name;
+            break;
+                   }
+        if(name!=usernames[key]){
+        document.getElementById("mydiv").innerHTML = 'wrong username, try again';
+        break;
+    }
+        }
+        }
+    </script>
+</head>
+<body>
+    <form>
+      name:  <input type="text" id="username">
+      <input type='button' value="click here" onclick=validateUser()>
+    </form>
+    <div id="mydiv"> </div>
+</body>
+</html>
