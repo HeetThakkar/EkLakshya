@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    lap=['dell','hp','mac','lenevo'];
+    mob=['one plus','apple','moto','realme','mi'];
+    t=['samsung','sony','panasonic','one plus','mi'];
+    function brand(){
+    
+            a=document.getElementById('climate').value;
+            
+            switch(a){
+                case "0":
+               document.getElementById('mydiv').innerHTML=lap;
+               break;
+                case '1':
+                document.getElementById("mydiv").innerHTML = t;
+                break;
+                case "2":
+                document.getElementById("mydiv").innerHTML = mob;
+                break;
+                
+            }
+        }
+</script>
+</head>
+<body>
+    <form>
+    <select id="climate">
+        <option value="0">laptop</option>
+ <option value="1">tv</option>  
+<option value="2">mobile</option>    
+</select><br><br>
+<input type='button' value="click here" onclick=brand()>
+</form>
+
+<div id="mydiv"></div>
+
+</body>
+</html>
