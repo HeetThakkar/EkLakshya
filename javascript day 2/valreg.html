@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function val(){
+            name= document.myform.name.value;
+            email= document.myform.email.value;
+            pass= document.myform.pass.value;
+            confirmpass= document.myform.confirmpass.value;
+            phone=document.myform.phone.value;
+            gender= document.myform.gender.value;
+            branch=document.myform.branch.value;
+            usernames=['ram','tom','jack','heet'];
+            function valName(name){
+                if (name==''){
+                    alert('enter a name');
+                    document.myform.name.focus();
+                    return false;
+                    
+                }
+               else if (name.length<3 ){
+                    alert('enter a name with length greater than 3');
+                    document.myform.name.focus();
+                    return false;
+                }
+                else if (!validateUser(name)){
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }
+            flag=0;
+        function validateUser(name){
+            usernames=['ram','tom','jack','heet'];
+        for(key in usernames){
+        if (name==usernames[key]){
+            flag=1;}}
+            if (flag==1){
+           alert('name already exist');
+           return false;
+            
+                   }
+                   else{
+        return true;
+        
+    }
+        
+        }
+            function valEmail(email){
+                if (email==''){
+                    alert('enter a email');
+                    document.myform.email.focus();
+                    return false;
+                    
+                }
+                else{
+                    return true;
+                }
+            }
+            function valPhone(phone){
+                if (phone==''){
+                    alert('enter a phone number');
+                    document.myform.phone.focus();
+                    return false;
+                    
+                }
+                else{
+                    return true;
+                }
+            }
+            function valPass(pass,confirmpass)
+            {
+                if (pass==''){
+                    alert('enter a password');
+                    document.myform.pass.focus();
+                    return false;
+                    
+                }
+               else if (pass.length<3 ){
+                    alert('enter a passsword with length greater than 3');
+                    document.myform.pass.focus();
+                    return false;
+                }
+                else if(pass != confirmpass){
+                    alert("enter same password in confirm password");
+                    document.myform.confirmpass.focus();
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            
+            }
+function valGen(gender){
+    if(gender==''){
+        alert("select a gender");
+                    document.myform.gender[0].clicked();
+                    return false;
+    }
+    else {
+    
+        return true;
+    }
+}
+function valBranch(branch){
+    if(branch==''){
+        alert("select a branch");
+                    document.myform.branch.clicked();
+                    return false;
+    }
+    else {
+    
+        return true;
+    }
+}
+            if(valName(name)&& valEmail(email) && valPass(pass,confirmpass)&& valPhone(phone)&&valGen(gender)&&valBranch(branch))
+            alert("you have successfully registered");
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <form name="myform" action="con.html"><br>
+        name: <input type="text" name="name" ><br>
+        EMAIL: <input type="email" name="email"><br>
+        phone number: <input type="number" maxlength="10" name="phone"><br>
+        password: <input type="password" name="pass"><br>
+        confirm password: <input type="password" name="confirmpass"><br>
+        gender: <input type="radio" name="gender" value="male">male
+        <input type="radio" name="gender" value="female">female<br>
+        branch: <select name="branch" id="branch">
+            <option value="comps">comps</option>   
+            <option value="it">it</option>  
+            <option value="civil">civil</option>  
+             </select><br>
+             <input type="button" name="submit" value="submit" onclick=val()>
+
+    </form>
+</body>
+</html>
